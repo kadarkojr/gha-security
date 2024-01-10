@@ -12,7 +12,7 @@ jobs:
         run: |
           curl -X POST \
             --url https://api.github.com/repos/kadarkojr/gha-security/issues/4/labels \
-            -H 'Authorization: ***' \
+            -H 'Authorization: Bearer ${{secrets.GITHUB_TOKEN}}' \
             -H 'Content-Type: application/json' \
             -d '{"labels": ["bug"]}' \
             --fail
